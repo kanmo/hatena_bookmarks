@@ -1,6 +1,5 @@
 HatenaBookmarks
 ===============
 
-** TODO: Add description **
 # hatena_bookmarks
-# hatena_bookmarks
+Elixir練習用プロジェクト。サイトのブックマーク情報を取得する。

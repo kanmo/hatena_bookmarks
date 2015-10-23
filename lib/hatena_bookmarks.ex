@@ -7,14 +7,6 @@ defmodule HatenaBookmarks do
     |> sort_descending_and_format
   end
 
-  def decode_response({:ok, body}), do: body
-
-  def decode_response({:error, error}) do
-    {_, message} = List.keyfind(error, "message", 0)
-    IO.puts "Error fetchng from Hatena: #{message}"
-    System.halt(2)
-  end
-
   def handle_response(%{status_code: 200, body: body}) do
     String.slice(body, 1..-3)
     |> Poison.decode!
